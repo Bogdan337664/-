@@ -1,24 +1,23 @@
-class BookCollection:
-    collection = []
+class TriangleValidator:
+    def initialize(self, side_a, side_b, side_c):
+        self.side_a = side_a
+        self.side_b = side_b
+        self.side_c = side_c
+        
+    def check_triangle(self):
+        a = self.side_a
+        b = self.side_b
+        c = self.side_c
+        try:
+            if a > 0 and b > 0 and c > 0:
+                if a + b > c and a + c > b and b + c > a:
+                    print('Great, you can build a triangle from these sides!')
+                else:
+                    print('Unfortunately, these sides cannot form a triangle.')
+            else:
+                print('Cannot work with negative numbers')
+        except TypeError:
+            print('Please input only numbers')
 
-    def insert_book(self, book_name):
-        self.collection.append(book_name)
-        print(self.collection)
-        return self.collection
-
-    def remove_book(self, book):
-        self.collection.remove(book)
-        print(self.collection)
-        return self.collection
-
-    def locate_book(self, book_name):
-        index = self.collection.index(book_name)
-        print(f'{index} - это индекс книги')
-        return index
-
-my_collection = BookCollection()
-my_collection.insert_book('Война и мир')
-my_collection.remove_book('Война и мир')
-my_collection.insert_book('Гена')
-my_collection.insert_book('Волк')
-my_collection.locate_book('Волк')
+triangle = TriangleValidator(3, 4, 5)
+triangle.check_triangle()

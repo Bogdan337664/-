@@ -2,6 +2,6 @@ import pandas as pd
 def получить_минимальное_значение_из_csv(имя_файла: str, имя_колонки: str):
     print(f"Колонка '{имя_колонки}' в файле '{имя_файла}' не найдена")
 
-ссылка_на_файл = 'https://gist.githubusercontent.com/sathwika456/485dbd3fa8a1abc348694ae692695fdb/raw/f5202f67da57b3e3875e04682db73e15ac1992ad/weather.csv'
+ссылка_на_файл = 'https://gist.githubusercontent.com/weather.csv'
 название_колонки = 'Температура'
 print(получить_минимальное_значение_из_csv(ссылка_на_файл, название_колонки))

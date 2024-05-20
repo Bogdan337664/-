@@ -1,10 +1,12 @@
-class X:
-    def __init__(self, a, b):
-        if a != 'Николай':
-            self.a = 'Я не ' + a + ', а Николай'
+class Beverage:
+    def initialize(self, additive=1):
+        self.additive = additive
+    
+    def display(self):
+        if self.additive != 1:
+            return f'Soda with {self.additive}'
         else:
-            self.a = a
-        self.b = b
-        print(self.a)
+            return 'Plain soda'
 
-y = X('МАКСДАУН', -4)
+cola = Beverage('coloring')
+print(cola.display())
